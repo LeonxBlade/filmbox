@@ -34,16 +34,16 @@ FilmBox, kullanıcıların izledikleri filmleri takip edebildiği, izlemek isted
 ## 📸 Ekran Görüntüleri
 
 ### Film Listeleme
-![Film Listeleme](public/screenshots/listeleme%20ss%20.png)
+![Film Listeleme](public/screenshots/listeleme.png)
 
 ### Film Arama
-![Film Arama](public/screenshots/arama%20kontrol%C3%BC.png)
+![Film Arama](public/screenshots/arama.png)
 
 ### Film Filtreleme
-![Film Filtreleme](public/screenshots/Filtreleme%20%C3%B6rne%C4%9Fi.png)
+![Film Filtreleme](public/screenshots/filtreleme.png)
 
 ### Film Güncelleme
-![Film Güncelleme](public/screenshots/G%C3%BCncelleme%20%C3%B6rne%C4%9Fi.png)
+![Film Güncelleme](public/screenshots/guncelleme.png)
 
 ## 💻 Kurulum
 
