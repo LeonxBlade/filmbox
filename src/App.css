@@ -1,0 +1,791 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* CINEMA GOLD — FILMBOX */
+
+:root {
+  font-family: 'Inter', Arial, sans-serif;
+  color: #eee9e1;
+  background: #11100f;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #11100f;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  color: #eee9e1;
+  background:
+    radial-gradient(ellipse at 50% -15%,
+      rgba(126, 96, 54, .12), transparent 55%),
+    #11100f;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.app {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 18px 24px 30px;
+  color: #eee9e1;
+  text-align: left;
+}
+
+/* UST MENU */
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 5px 0 17px;
+  border-bottom: 1px solid #37322b;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 41px;
+  height: 41px;
+  color: #e0bc81;
+  background: #352d23;
+  border: 1px solid #766044;
+  border-radius: 10px;
+}
+
+.brand h1 {
+  margin: 0;
+  color: #f1ece4;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.brand h1 span {
+  color: #d5b27b;
+}
+
+.brand p {
+  margin: 2px 0 0;
+  color: #a69b8d;
+  font-size: 10px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11px;
+}
+
+.header-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #bca88a;
+}
+
+.kayit-durumu {
+  padding: 7px 11px;
+  color: #a0d0b0;
+  background: #202e25;
+  border: 1px solid #3a5842;
+  border-radius: 20px;
+}
+
+/* SINEMATIK HERO */
+
+.hero-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 18px;
+  padding: 20px 25px;
+  background:
+    linear-gradient(110deg, #30271e, #1c1b19);
+  border: 1px solid #514537;
+  border-radius: 13px;
+}
+
+.eyebrow {
+  color: #d1ad76;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.hero-panel h2 {
+  margin: 8px 0;
+  color: #f2e9db;
+  font-size: clamp(19px, 2vw, 24px);
+  font-weight: 800;
+  letter-spacing: -.5px;
+}
+
+.hero-panel p {
+  margin: 0;
+  color: #b8ac9d;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.hero-symbol {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 75px;
+  height: 75px;
+  color: #d9b77f;
+  background: #3c3023;
+  border: 1px solid #755d3f;
+  border-radius: 15px;
+  transform: rotate(-7deg);
+}
+
+.hero-symbol svg {
+  width: 45px;
+  height: 45px;
+}
+
+/* IKONLU ISTATISTIKLER */
+
+.film-istatistikleri {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 13px;
+  margin: 18px 0;
+}
+
+.istatistik-karti {
+  display: grid;
+  grid-template-columns: 39px 1fr;
+  grid-template-rows: auto auto;
+  align-items: center;
+  column-gap: 11px;
+  min-height: 84px;
+  padding: 13px 15px;
+  background: #211e1b;
+  border: 1px solid #494037;
+  border-radius: 11px;
+  transition: transform .2s, border-color .2s;
+}
+
+.istatistik-karti:hover {
+  transform: translateY(-3px);
+  border-color: #a48759;
+}
+
+.istatistik-ikon {
+  display: grid;
+  place-items: center;
+  grid-row: span 2;
+  width: 39px;
+  height: 39px;
+  color: #d5b27b;
+  background: #3a3024;
+  border-radius: 10px;
+}
+
+.istatistik-karti span {
+  color: #b9afa3;
+  font-size: 11px;
+}
+
+.istatistik-karti strong {
+  color: #e4c38f;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.istatistik-karti:nth-child(2) {
+  border-color: #385143;
+}
+
+.istatistik-karti:nth-child(2) .istatistik-ikon {
+  color: #8ec7a1;
+  background: #253a2c;
+}
+
+.istatistik-karti:nth-child(2) strong {
+  color: #8ec7a1;
+}
+
+.istatistik-karti:nth-child(3) {
+  border-color: #67503a;
+}
+
+.istatistik-karti:nth-child(3) .istatistik-ikon {
+  color: #e0b183;
+  background: #453222;
+}
+
+.istatistik-karti:nth-child(3) strong {
+  color: #e0b183;
+}
+
+.istatistik-karti:nth-child(4) {
+  border-color: #514b40;
+}
+
+.istatistik-karti:nth-child(4) .istatistik-ikon {
+  color: #d0c0a7;
+  background: #393329;
+}
+
+.istatistik-karti:nth-child(4) strong {
+  color: #d0c0a7;
+}
+
+/* PANELLER */
+
+.ekleme-panelleri {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 18px 0;
+}
+
+.panel {
+  min-width: 0;
+  padding: 18px;
+  background: #1d1b19;
+  border: 1px solid #3f3830;
+  border-radius: 12px;
+}
+
+.panel-baslik {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #d5b27b;
+}
+
+.panel-baslik h2 {
+  margin: 0 0 4px;
+  color: #eee9e1;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.panel-baslik p {
+  margin: 0;
+  color: #a99e90;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.panel-form {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+input {
+  min-width: 0;
+  padding: 10px 12px;
+  color: #eee9e1;
+  background: #2b2723;
+  border: 1px solid #5c5041;
+  border-radius: 8px;
+  outline: none;
+  font-size: 11px;
+}
+
+input::placeholder {
+  color: #a39787;
+}
+
+input:focus {
+  border-color: #c3a16e;
+  box-shadow: 0 0 0 3px rgba(195, 161, 110, .12);
+}
+
+.panel-form > input {
+  flex: 1;
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 14px;
+  color: #fff5e6;
+  background: #826239;
+  border: 1px solid #b18b54;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  transition: transform .2s, background .2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  background: #9c7746;
+}
+
+button:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.dosya-sec {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  max-width: 145px;
+  padding: 10px;
+  color: #e0c69e;
+  background: #393024;
+  border: 1px dashed #8c704c;
+  border-radius: 8px;
+  font-size: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.dosya-sec input,
+.poster-yukle input {
+  display: none;
+}
+
+/* ARSIV BASLIGI */
+
+.arsiv-paneli {
+  margin-top: 20px;
+}
+
+.arsiv-baslik {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.baslik-sayac {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 25px;
+  margin-left: 5px;
+  padding: 3px 7px;
+  color: #e5c796;
+  background: #3d3020;
+  border-radius: 20px;
+  font-size: 11px;
+}
+
+.liste-arama {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: min(100%, 260px);
+  padding: 0 11px;
+  color: #bca78a;
+  background: #2b2723;
+  border: 1px solid #594c3d;
+  border-radius: 8px;
+}
+
+.liste-arama input {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.liste-arama input:focus {
+  box-shadow: none;
+}
+
+.liste-arama button {
+  padding: 3px;
+  background: transparent;
+  border: none;
+}
+
+/* YATAY IKONLU FILTRELER */
+
+.durum-filtreleri {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0;
+}
+
+.filtre-ikon {
+  color: #b5a38b;
+  margin-right: 3px;
+}
+
+.filtre-butonu {
+  padding: 8px 12px;
+  color: #c9bca9;
+  background: #302b25;
+  border: 1px solid #54483a;
+  border-radius: 8px;
+  font-size: 11px;
+}
+
+.filtre-butonu span {
+  padding: 2px 7px;
+  color: #e0d1ba;
+  background: rgba(255, 255, 255, .07);
+  border-radius: 12px;
+}
+
+.filtre-butonu.aktif {
+  color: #fff5e6;
+  background: #826239;
+  border-color: #b89560;
+}
+
+.filtre-butonu:hover {
+  background: #51402c;
+}
+
+/* KOMPAKT FILM KARTLARI */
+
+.film-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.film-karti {
+  min-width: 0;
+  background: #26221e;
+  border: 1px solid #493e33;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform .2s, border-color .2s, box-shadow .2s;
+}
+
+.film-karti:hover {
+  transform: translateY(-4px);
+  border-color: #b39563;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .3);
+}
+
+.poster-kapsayici {
+  position: relative;
+  overflow: hidden;
+}
+
+.poster-kapsayici img,
+.poster-yok {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  background: #151311;
+}
+
+.poster-yok {
+  display: grid;
+  place-items: center;
+  color: #a99b89;
+  font-size: 10px;
+}
+
+.durum-etiketi {
+  position: absolute;
+  bottom: 7px;
+  left: 7px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 7px;
+  color: #eee9e1;
+  background: rgba(17, 16, 15, .9);
+  border: 1px solid rgba(255, 255, 255, .13);
+  border-radius: 6px;
+  font-size: 9px;
+  backdrop-filter: blur(6px);
+}
+
+.etiket-izlendi {
+  color: #98d4ac;
+}
+
+.etiket-izlenmedi {
+  color: #e6bd88;
+}
+
+.etiket-liste {
+  color: #dcc5a0;
+}
+
+.kart-icerik {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+}
+
+.kart-icerik h3 {
+  margin: 0;
+  color: #f0ebe3;
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.kart-icerik p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+  color: #afa293;
+  font-size: 10px;
+}
+
+.durum-secimi {
+  width: 100%;
+  padding: 8px;
+  color: #eee9e1;
+  background: #302a23;
+  border: 1px solid #62513f;
+  border-radius: 7px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.durum-secimi option {
+  color: white;
+  background: #302a23;
+}
+
+.durum-izlendi {
+  color: #98d4ac;
+  border-color: #467b57;
+}
+
+.durum-izlenmedi {
+  color: #e6bd88;
+  border-color: #9c7443;
+}
+
+.durum-liste {
+  color: #dcc5a0;
+  border-color: #90764f;
+}
+
+.poster-yukle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 8px;
+  color: #e0c69e;
+  background: #3a3025;
+  border: 1px dashed #8b704d;
+  border-radius: 7px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.kart-butonlar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.kart-butonlar button {
+  padding: 8px 5px;
+  font-size: 10px;
+}
+
+.kart-butonlar .sil-buton {
+  color: #efaaaa;
+  background: #422b2a;
+  border-color: #784947;
+}
+
+.kart-butonlar .sil-buton:hover {
+  background: #783b3b;
+}
+
+.ekle-buton {
+  width: 100%;
+}
+
+.bos-liste {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  padding: 45px 15px;
+  color: #afa293;
+  text-align: center;
+}
+
+.bos-liste p {
+  margin: 0;
+  font-size: 11px;
+}
+
+.hata-mesaji {
+  padding: 11px;
+  color: #f3a5a5;
+  background: #3a2424;
+  border: 1px solid #764545;
+  border-radius: 8px;
+  font-size: 11px;
+}
+
+/* ALT BILGI */
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-top: 24px;
+  padding: 18px 0;
+  color: #968a7a;
+  border-top: 1px solid #37322b;
+  font-size: 10px;
+}
+
+.site-footer span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #d5b27b;
+  font-weight: 700;
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+  .film-istatistikleri {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ekleme-panelleri {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* MOBIL */
+
+@media (max-width: 650px) {
+  .app {
+    padding: 14px 11px;
+  }
+
+  .header-label {
+    display: none;
+  }
+
+  .hero-panel {
+    padding: 17px;
+  }
+
+  .hero-symbol {
+    display: none;
+  }
+
+  .film-istatistikleri {
+    gap: 8px;
+  }
+
+  .istatistik-karti {
+    padding: 11px;
+    grid-template-columns: 32px 1fr;
+    column-gap: 8px;
+  }
+
+  .istatistik-ikon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .istatistik-karti strong {
+    font-size: 20px;
+  }
+
+  .istatistik-karti span {
+    font-size: 10px;
+  }
+
+  .panel {
+    padding: 14px;
+  }
+
+  .panel-form > input {
+    flex-basis: 100%;
+  }
+
+  .liste-arama {
+    width: 100%;
+  }
+
+  .film-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .kart-icerik {
+    padding: 9px;
+  }
+
+  .kart-butonlar {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}
